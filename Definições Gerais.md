@@ -61,6 +61,8 @@ C | Componente
 
 **Linguagem de programação**
 
+* Typescript
+
 ---
 
 **Hipótese de estrutura de dados para controlar ocorrência de eventos**
