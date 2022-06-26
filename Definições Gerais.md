@@ -12,12 +12,6 @@
 
 **Definição do formato do arquivo de configuração de entrada**
 
-* Legenda:
-  * E - Entrada
-  * C - Componente (Centro de serviço)
-  * R - Roteador (Estrutura de decisão)
-  * S - Saida
-  * i - Índice do componente
 * **E**i-**C**i
   * Significa que a *Entrada i* direciona a entidade temporária para o *Componente i*
 * **C**i;1;3-7;**C**i+1
@@ -30,6 +24,13 @@
   * Significa que o componente de *Roteamento i* tem 30% (0.3) de chance de encaminhar a entidade para o *Componente i* e outros 70% (0.7) de encaminhar para a *Saida i*
   * Da mesma forma que roteadores *podem direcionar para saidas*, eles também podem direcionar para um *outro roteador* ou *componente*
   
+Simbolo   | Significado
+--------- | ------
+E | Entrada
+C | Componente (Centro de serviço)
+R | Roteador (Estrutura de decisão)
+S | Saida
+i | Índice do componente
 ---
 
 **Diagrama de contexto, ou recurso similar, indicando os módulos principais**
