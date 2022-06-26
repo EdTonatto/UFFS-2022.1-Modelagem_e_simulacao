@@ -23,6 +23,8 @@
 * **R**i;0.3-**C**i;0.7-**S**i
   * Significa que o componente de *Roteamento i* tem 30% (0.3) de chance de encaminhar a entidade para o *Componente i* e outros 70% (0.7) de encaminhar para a *Saida i*
   * Da mesma forma que roteadores *podem direcionar para saidas*, eles também podem direcionar para um *outro roteador* ou *componente*
+* **TS**=X
+  * Indica o *tempo total de simulacao* que deve ser executado pelo modelo
 
 Símbolo   | Significado
 --------- | ------
@@ -30,6 +32,7 @@ E | Entrada
 C | Componente (Centro de serviço)
 R | Roteador (Estrutura de decisão)
 S | Saida
+TS | Tempo Simulado
 i | Índice do componente
 
 ---
