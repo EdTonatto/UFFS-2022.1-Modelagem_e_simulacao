@@ -24,13 +24,35 @@
   * Significa que o componente de *Roteamento i* tem 30% (0.3) de chance de encaminhar a entidade para o *Componente i* e outros 70% (0.7) de encaminhar para a *Saida i*
   * Da mesma forma que roteadores *podem direcionar para saidas*, eles também podem direcionar para um *outro roteador* ou *componente*
   
-Simbolo   | Significado
 --------- | ------
 E | Entrada
 C | Componente (Centro de serviço)
 R | Roteador (Estrutura de decisão)
 S | Saida
 i | Índice do componente
+
+---
+
+**Definição do formato do arquivo de saida**
+
+* O_Ci:X
+  * *Ociosidade* de *X* unidades de tempo para o *Componente i*
+* TME_ETCi:X
+  * *Tempo Médio de Espera* de *X* unidades de tempo das *Entidades Temporarias* no *Componente i*
+* TMA_ETCi:X
+  * *Tempo Médio de Atendimento* de *X* unidades de tempo das *Entidades Temporarias* no *Componente i*
+* TMP_ET:X
+  * *Tempo Médio de Permanência* de *X* unidades de tempo das *Entidades Temporarias* no modelo em geral.
+
+Símbolo   | Significado
+--------- | ------
+O | Ociosidade
+TME | Tempo Médio de Espera
+TMA | Tempo Médio de Atendimento
+TMP | Tempo Médio de Permanência
+ET | Entidades Temporarias
+C | Componente
+
 ---
 
 **Diagrama de contexto, ou recurso similar, indicando os módulos principais**
