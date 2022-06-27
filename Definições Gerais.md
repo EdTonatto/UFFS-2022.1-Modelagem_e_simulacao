@@ -61,6 +61,8 @@ C | Componente
 
 **Diagrama de contexto, ou recurso similar, indicando os módulos principais**
 
+![Diagrama](https://raw.githubusercontent.com/EdTonatto/UFFS-2022.1-Modelagem_e_simulacao/main/Diagrama.png)
+
 ---
 
 **Linguagem de programação**
