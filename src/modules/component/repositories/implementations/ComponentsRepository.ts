@@ -25,7 +25,7 @@ class ComponentsRepository implements IComponentsRepository{
         flagBusy,
         timeInOut,
         next,
-    }: ICreateComponentDTO): void {
+    }: ICreateComponentDTO): Component {
         const component = new Component();
 
         Object.assign(component, {
@@ -38,6 +38,8 @@ class ComponentsRepository implements IComponentsRepository{
         });
 
         this.components.push(component);
+
+        return component;
     }
 
 }
