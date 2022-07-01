@@ -11,6 +11,11 @@ class ComponentsRepository implements IComponentsRepository{
         this.components = []
     }
 
+    findByName(name: string): Component {
+        const component = this.components.find(component => component.name === name);
+        return component;
+    }
+
     list(): Component[] {
         return this.components;
     }
