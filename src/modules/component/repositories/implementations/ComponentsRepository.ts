@@ -11,6 +11,10 @@ class ComponentsRepository implements IComponentsRepository{
         this.components = []
     }
 
+    list(): Component[] {
+        return this.components;
+    }
+
     public static getInstance() {
         if(!ComponentsRepository.INSTANCE){
             ComponentsRepository.INSTANCE = new ComponentsRepository();
