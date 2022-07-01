@@ -13,6 +13,12 @@ class CreateComponentUseCase {
         timeInOut,
         next,
     }: ICreateComponentDTO): Component {
+        const componentAlreadyExists = this.componentsRepository.findByName(name);
+        
+        if(componentAlreadyExists){
+            throw new Error('Component already exists!');
+        }
+
         const component = this.componentsRepository.create({
             name,
             qtyServer,
