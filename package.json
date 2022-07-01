@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node index.ts"
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
   },
   "repository": {
     "type": "git",
@@ -16,10 +19,5 @@
   "bugs": {
     "url": "https://github.com/EdTonatto/UFFS-2022.1-Modelagem_e_simulacao/issues"
   },
-  "devDependencies": {
-    "ts-node": "^8.10.1",
-    "typescript": "^4.7.4"
-  },
-  "homepage": "https://github.com/EdTonatto/UFFS-2022.1-Modelagem_e_simulacao#readme",
-  "type": "module"
+  "homepage": "https://github.com/EdTonatto/UFFS-2022.1-Modelagem_e_simulacao#readme"
 }
