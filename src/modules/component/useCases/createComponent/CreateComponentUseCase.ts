@@ -1,3 +1,4 @@
+import { AppError } from "../../../../errors/AppError";
 import { ICreateComponentDTO } from "../../dtos/ICreateComponentDTO";
 import { Component } from "../../entities/Component";
 import { IComponentsRepository } from "../../repositories/IComponentsRepository";
@@ -14,9 +15,9 @@ class CreateComponentUseCase {
         next,
     }: ICreateComponentDTO): Component {
         const componentAlreadyExists = this.componentsRepository.findByName(name);
-        
+
         if(componentAlreadyExists){
-            throw new Error('Component already exists!');
+            throw new AppError('Component already exists!');
         }
 
         const component = this.componentsRepository.create({
