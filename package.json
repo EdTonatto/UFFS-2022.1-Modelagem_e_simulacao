@@ -1,0 +1,19 @@
+{
+  "name": "model_system",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdTonatto/UFFS-2022.1-Modelagem_e_simulacao.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdTonatto/UFFS-2022.1-Modelagem_e_simulacao/issues"
+  },
+  "homepage": "https://github.com/EdTonatto/UFFS-2022.1-Modelagem_e_simulacao#readme"
+}
