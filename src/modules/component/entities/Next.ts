@@ -1,7 +1,6 @@
 class Next {
     percent: number;
-    name: string
-     
+    name: string;    
 }
 
 export { Next }
