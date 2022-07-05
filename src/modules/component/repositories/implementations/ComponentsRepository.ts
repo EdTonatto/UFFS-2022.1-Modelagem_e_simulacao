@@ -11,6 +11,13 @@ class ComponentsRepository implements IComponentsRepository{
         this.components = []
     }
 
+    public static getInstance() {
+        if(!ComponentsRepository.INSTANCE){
+            ComponentsRepository.INSTANCE = new ComponentsRepository();
+        }
+        return ComponentsRepository.INSTANCE;
+    }
+
     findByName(name: string): Component {
         const component = this.components.find(component => component.name === name);
         return component;
@@ -18,13 +25,6 @@ class ComponentsRepository implements IComponentsRepository{
 
     list(): Component[] {
         return this.components;
-    }
-
-    public static getInstance() {
-        if(!ComponentsRepository.INSTANCE){
-            ComponentsRepository.INSTANCE = new ComponentsRepository();
-        }
-        return ComponentsRepository.INSTANCE;
     }
 
     create({    
