@@ -61,7 +61,7 @@ C | Componente
 
 **Diagrama de contexto, ou recurso similar, indicando os módulos principais**
 
-![Diagrama](https://raw.githubusercontent.com/EdTonatto/UFFS-2022.1-Modelagem_e_simulacao/main/Diagrama.png)
+![Diagrama](https://raw.githubusercontent.com/EdTonatto/UFFS-2022.1-Modelagem_e_simulacao/main/docs/Diagrama.png)
 
 ---
 
@@ -72,5 +72,28 @@ C | Componente
 ---
 
 **Hipótese de estrutura de dados para controlar ocorrência de eventos**
+<pre><code>Object.Interval(
+  initial: number,
+  final: number
+)
 
+Object.Next(
+  percent: number,
+  name: string
+)
+
+Object.Component(
+  name: string,
+  qtyServer: number,
+  randomTimeServer: Interval[],
+  flagBusy: Boolean[],
+  timeInOut: Interval[],
+  next: Next[]
+)
+
+Object.Model(
+  id: string,
+  name: string,
+  components: Component[]
+)</pre></code>
 ---
