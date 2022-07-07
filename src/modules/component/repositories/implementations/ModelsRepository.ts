@@ -17,6 +17,15 @@ class ModelsRepository implements IModelsRepository{
         }
         return ModelsRepository.INSTANCE;
     }
+    
+    findByName(name: string): Model {
+        const model = this.models.find(model => model.name === name);
+        return model;
+    }
+
+    list(): Model[] {
+        return this.models;
+    }
 
     create({name, components}: ICreateModelDTO): Model {
         const model = new Model();
