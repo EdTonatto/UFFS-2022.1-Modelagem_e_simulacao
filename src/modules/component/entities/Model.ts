@@ -5,6 +5,7 @@ class Model {
     id: string;
     name: string;
     components: Component[];
+    qtyUser: number;
 
     constructor() {
         if (!this.id) {

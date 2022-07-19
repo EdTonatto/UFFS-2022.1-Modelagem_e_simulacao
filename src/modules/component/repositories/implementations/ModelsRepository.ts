@@ -23,6 +23,11 @@ class ModelsRepository implements IModelsRepository{
         return model;
     }
 
+    findById(id: string): Model {
+        const model = this.models.find(model => model.id === id)
+        return model;
+    }
+
     list(): Model[] {
         return this.models;
     }
