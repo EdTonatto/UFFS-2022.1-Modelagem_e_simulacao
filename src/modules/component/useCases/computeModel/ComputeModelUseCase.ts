@@ -10,7 +10,15 @@ class ComputeModelUseCase{
     constructor(private modelsRepository: IModelsRepository){}
 
     computeComponent(temporaryUser: TemporaryUser, component: Component){
-
+        console.log(`${temporaryUser.name} - ${component.name}`);
+        const nextComponent = ComponentsRepository.getInstance().findByName(getNextComponent(component));
+        if(nextComponent) {
+            this.computeComponent(temporaryUser, nextComponent);
+        }else{
+            console.log('--------------------------')
+            return null;
+        }
+        return null;
     }
 
     execute(id: string){
