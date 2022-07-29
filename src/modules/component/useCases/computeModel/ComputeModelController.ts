@@ -7,9 +7,9 @@ class ComputeModelController {
     handle(request: Request, response: Response): Response {
         const { id }  = request.params;
 
-        const retorno = this.computeModelUseCase.execute(id);
+        this.computeModelUseCase.execute(id);
 
-        return response.status(200).send(retorno)
+        return response.status(200);
     }
 }
 
