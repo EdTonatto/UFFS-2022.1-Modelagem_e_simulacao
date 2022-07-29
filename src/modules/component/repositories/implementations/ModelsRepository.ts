@@ -1,6 +1,9 @@
 import { ICreateModelDTO } from "../../dtos/ICreateModelDTO";
+import { Component } from "../../entities/Component";
 import { Model } from "../../entities/Model";
+import { IComponentsRepository } from "../IComponentsRepository";
 import { IModelsRepository } from "../IModelsRepository";
+import { ComponentsRepository } from "./ComponentsRepository";
 
 class ModelsRepository implements IModelsRepository{
     private models: Model[];
@@ -34,9 +37,17 @@ class ModelsRepository implements IModelsRepository{
 
     create({name, components}: ICreateModelDTO): Model {
         const model = new Model();
+        const componentsList: Component[] = [];
+
+        components.forEach(component => {
+            const componentsRepository: IComponentsRepository = ComponentsRepository.getInstance();
+            const componentObj: Component = componentsRepository.create(component);
+            componentsList.push(componentObj);
+        });
+
         Object.assign(model, {
             name,
-            components,
+            componentsList,
         });
 
         this.models.push(model);
