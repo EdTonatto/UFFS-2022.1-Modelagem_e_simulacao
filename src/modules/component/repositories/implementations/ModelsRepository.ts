@@ -46,7 +46,6 @@ class ModelsRepository implements IModelsRepository{
             componentsList.push(componentObj);
         });
 
-        console.log(qtyUser)
         Object.assign(model, {
             name,
             qtyUser,
