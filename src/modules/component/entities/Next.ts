@@ -1,5 +1,7 @@
+import { Interval } from "./Interval";
+
 class Next {
-    percent: number;
+    percent: Interval;
     name: string;    
 }
 
