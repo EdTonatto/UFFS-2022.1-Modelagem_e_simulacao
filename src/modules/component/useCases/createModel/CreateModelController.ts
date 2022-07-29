@@ -7,11 +7,13 @@ class CreateModelController {
     handle(request: Request, response: Response): Response {
         const {
             name,
+            qtyUser,
             components
         } = request.body;
 
         const model = this.createModelUserCase.execute({
             name,
+            qtyUser,
             components
         });
 

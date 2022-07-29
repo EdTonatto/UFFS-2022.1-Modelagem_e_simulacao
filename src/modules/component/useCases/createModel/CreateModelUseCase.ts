@@ -8,6 +8,7 @@ class CreateModelUseCase {
 
     execute({
         name,
+        qtyUser,
         components
     }: ICreateModelDTO): Model {
         const modelAlreadyExists = this.modelsRepository.findByName(name);
@@ -17,6 +18,7 @@ class CreateModelUseCase {
 
         const model = this.modelsRepository.create({
             name,
+            qtyUser,
             components
         });
 

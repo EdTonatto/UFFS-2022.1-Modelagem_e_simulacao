@@ -35,7 +35,7 @@ class ModelsRepository implements IModelsRepository{
         return this.models;
     }
 
-    create({name, components}: ICreateModelDTO): Model {
+    create({name, qtyUser, components}: ICreateModelDTO): Model {
         const model = new Model();
         const componentsList: Component[] = [];
 
@@ -46,9 +46,11 @@ class ModelsRepository implements IModelsRepository{
             componentsList.push(componentObj);
         });
 
+        console.log(qtyUser)
         Object.assign(model, {
             name,
-            componentsList,
+            qtyUser,
+            components: componentsList,
         });
 
         this.models.push(model);
