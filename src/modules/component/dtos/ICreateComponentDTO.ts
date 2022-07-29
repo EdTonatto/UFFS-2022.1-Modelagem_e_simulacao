@@ -9,6 +9,7 @@ interface ICreateNextDTO {
 }
 
 interface ICreateComponentDTO {
+    id_model: string;
     name: string;
     qtyServer: number;
     randomTimeServer: ICreateIntervalDTO[];

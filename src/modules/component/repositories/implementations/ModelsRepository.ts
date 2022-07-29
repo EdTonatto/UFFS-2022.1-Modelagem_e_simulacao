@@ -42,6 +42,7 @@ class ModelsRepository implements IModelsRepository{
         components.forEach(component => {
             const componentsRepository: IComponentsRepository = ComponentsRepository.getInstance();
             const componentObj: Component = componentsRepository.create(component);
+            componentObj.id_model = model.id;
             componentsList.push(componentObj);
         });
 

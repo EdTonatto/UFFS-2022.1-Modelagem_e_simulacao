@@ -4,6 +4,7 @@ import { v4 as uuidV4 } from 'uuid';
 
 class Component {
     id: string;
+    id_model: string;
     name: string;
     qtyServer: number;
     randomTimeServer: Interval[];
